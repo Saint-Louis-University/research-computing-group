@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slurms on SLU RCG Website</title>
+    <link>/research-computing-group/slurm/</link>
+    <description>Recent content in Slurms on SLU RCG Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/research-computing-group/slurm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SLURM Examples</title>
+      <link>/research-computing-group/slurm/slurm-examples/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/slurm/slurm-examples/</guid>
+      <description>Submission script examples Here are some quick sample submission scripts. For more detailed information, make sure to have a look at the Slurm FAQ and to follow our training sessions. There is also Script Generation Wizard you can use to help you in submission scripts creation.
+Message passing example (MPI) #!/bin/bash # #SBATCH --job-name=test_mpi #SBATCH --output=res_mpi.txt # #SBATCH --ntasks=4 #SBATCH --time=10:00 module load openmpi mpirun hello.mpi  Request four cores on the cluster for 10 minutes, using 100 MB of RAM per core.</description>
+    </item>
+    
+    <item>
+      <title>SLURM Commands</title>
+      <link>/research-computing-group/slurm/slurm-commands/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/slurm/slurm-commands/</guid>
+      <description>SLURM is the job scheduler that we are using on Apex. This allows jobs to be run on a node. How the jobs starts, runs, and completes is normally dictated by a script.
+More detailed information and tutorials can be found at SLURM information page. Please also read the F.A.Q below. before
+Note : We have listed the most commonly used commands below. Futher
+Useful SLURM Commands Here is a list of the most common SLURM commands.</description>
+    </item>
+    
+  </channel>
+</rss>

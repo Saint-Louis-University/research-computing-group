@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apexes on SLU RCG Website</title>
+    <link>/research-computing-group/apex/</link>
+    <description>Recent content in Apexes on SLU RCG Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/research-computing-group/apex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>APEX</title>
+      <link>/research-computing-group/apex/apex/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/apex/apex/</guid>
+      <description>Please see the Getting Started page if you are new to the HPC. This will explain how to connect to the cluster and the applications needed for this.
+Note: Please also see the Bright Cluster Manager 7.2 Manual for detailed information on how to use Apex.
+We are in the process of moving resources from Kepler to Apex. Updates on apex include:
+&amp;minus; CentOS 7.2
+&amp;minus; Infiniband connectivity on every nodes.</description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>/research-computing-group/apex/hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/apex/hardware/</guid>
+      <description>Listed below are the hardware specifications for our HPC cluster.
+100 compute nodes with Intel processors. 20 newest nodes have Intel Xeon E5-2690 v3 @ 2.60GHz processors. 10 high memory nodes with 500GB of RAM. Head node: Dell PowerEdge R720, Intel Xeon E5-2670 v2 @ 2.50GHz processors, access to 117TB InfiniBand connected storage volume. 2 GPU nodes 117TB InfiniBand connected network storage. InfiniBand connections to 40 compute nodes with dedicated IB switchOver 3000 available CPU processing cores, and over 1,700 CUDA GPU cores Bright Cluster Manager SLURM is used for job scheduling.</description>
+    </item>
+    
+  </channel>
+</rss>

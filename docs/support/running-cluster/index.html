@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Running Jobs on the Cluster</title>
+
+  <meta name="generator" content="Hugo 0.53" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+  <style>
+  :root{
+    --primary-color:#003da5;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/research-computing-group/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/research-computing-group/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/research-computing-group/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/research-computing-group/images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation -->
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/research-computing-group/">SLU</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/research-computing-group/">Home</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/about">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            getting-started
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/gettingstarted">Getting Started</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ftp/">FTP</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ssh/">SSH</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vpn/">VPN</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vnc/">VNC</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            support
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/a-support">Support</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/application-installation/">Application Installation</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/compilers/">Compilers</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/infiniband/">Infiniband</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/r-language/">R Language</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/storage/">Storage</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            slurm
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            apex
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/apex/">APEX</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/hardware/">Hardware</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/faq">FAQ</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/contact">Contact</a>
+        </li>
+        
+        
+      </ul>
+      
+      <ul class="list-inline text-center mb-0">
+        
+        <li class="list-inline-item"><a class="text-dark" href="/research-computing-group/"></a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/research-computing-group/gettingstarted/">Getting Started</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/">Slurms</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/apex/">Apexes</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/apex/apex/">APEX</a>
+            </li>
+            <li class=""><a href="/research-computing-group/apex/hardware/">Hardware</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/">Getting-starteds</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/getting-started/ftp/">FTP</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/ssh/">SSH</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vpn/">VPN</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc/">VNC</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc_subpage/">VNC Subpage</a>
+            </li></ul>
+              
+            </li>
+            <li class="parent d-block "><a href="/research-computing-group/support/">Supports</a>
+              <ul class="sub-menu">
+            <li class=""><a href="/research-computing-group/support/application-installation/">Application Installation</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/compilers/">Compilers</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/infiniband/">Infiniband</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/r-language/">R Language</a>
+            </li>
+            <li class=" active "><a href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/storage/">Storage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/contact/">Contact</a>
+            </li>
+            <li class=""><a href="/research-computing-group/faq/">FAQ</a>
+            </li>
+            <li class=""><a href="/research-computing-group/qmon-tutorial/">Qmon Tutorial</a>
+            </li>
+            <li class=""><a href="/research-computing-group/a-support/">Support</a>
+            </li>
+            <li class=""><a href="/research-computing-group/about/">home</a>
+            </li></ul>
+            </nav>
+    
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>Running Jobs on the Cluster</h2>
+            <p><u><strong>Running Applications on Apex</strong></u></p>
+
+<p>Most of the jobs on Apex will be run via the scheduler SLURM. The scheduler will take care of most of the logistics of where the job is run etc.</p>
+
+<p>If you are new to SLURM, the <a href="http://www.brightcomputing.com/blog/bid/174099/slurm-101-basic-slurm-usage-for-linux-clusters">SLURM 101</a> tutorial is a good place to start. This will show you how to write a basic job script and submit it to the scheduler.
+Partitions:</p>
+
+<p>A partition is the same thing as a job queue on Apex. Currently, we have the following partitions set up.</p>
+
+<p>1.&nbsp;&nbsp;hi_mem - compute-018-021 in this partition. These nodes have 512GB of RAM.</p>
+
+<p>2.&nbsp;&nbsp;med_mem - compute-022-025 in this partition. These nodes have 128GB of RAM.</p>
+
+<p>3.&nbsp;&nbsp;defq  - compute-026-031 in this partition. These nodes have 64GB of RAM.</p>
+
+<p>4.&nbsp;&nbsp;interactive - compute-032-033 in this partition. These nodes also have 64GB of RAM.<br> &nbsp;&nbsp; This queue is used if you want to log into a node interactively. <br>&nbsp;&nbsp;&nbsp;Note:There is a time limit on this queue of 2 days. This partition is primarily for testing an code etc.</p>
+
+<p>5.&nbsp;&nbsp;matlab - compute-022-023 in this partition. These nodes are configured to run Matlab.</p>
+
+<p>Useful SLURM Commands:</p>
+
+<p><html>
+<head>
+<style>
+table, th, td{
+  border: 1px solid gray;
+  border-collapse:collapse;
+}
+td{
+  padding: 2px;
+  text-align: left;
+  font-size: 15px;
+}
+th{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th style="width:90px;">Command</th>
+    <th style="width:650px">Description</th>
+  </tr>
+  <tr>
+    <td>sacct</td>
+    <td>reports job accounting info about running or completed jobs.</td>
+  </tr>
+  <tr>
+    <td>salloc</td>
+    <td>allocates resources for a job in real time.</td>
+  </tr>
+  <tr>
+    <td>sbatch</td>
+    <td>submits a job for later execution. script may contain srun command.</td>
+  <tr>
+    <td>scancel</td>
+    <td>cancels a pending or running job.</td>
+  </tr>
+  <tr>
+    <td>sinfo</td>
+    <td>reports the state of partitions and nodes managed by SLURM.</td>
+  </tr>
+  <tr>
+    <td>squeuue</td>
+    <td>reports state of jobs. jobs are listed in priority order followed by pending jobs in priority order.</td>
+  </tr>
+    <td>srun</td>
+    <td>used to submit jobs for execution in real time. this can be used with the interactive partition.</td>
+  </tr>
+</table></body></p>
+
+<p><strong>Note:</strong> You can get more information on specific command syntax be tryping: man command. E.g. man sacct</p>
+
+<p>Basic Job Submission Script:</p>
+
+<p>Command Examples:</p>
+
+<p><em>squeue</em> - this will list all jobs that are currently running or pending on the cluster partitions. Example of output is listed below.</p>
+
+<pre><code>JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           404      defq slurm-jo kaufmann PD       0:00      1 (Resources)
+           114      defq IVrunner  avicini  R 1-00:49:21      1 compute-033
+           115      defq IVrunner  avicini  R 1-00:46:13      1 compute-026
+</code></pre>
+
+<p>Job 114 is running on partion defq, the status is R which means the job is running. Total running time is 49 hours and 21 minutes. It&rsquo;s running on compute-033 only.</p>
+
+<p><em>scontrol  show job 114</em> - This would give the complete details of job 114.</p>
+
+<p><em>scontrol hold job 114</em> - This would hold job 114.</p>
+
+<p><em>sbatch job_script.sh</em> - Submits a job with the job_scipt.sh script.</p>
+
+<p><em>scancel 114</em> - This will cancel job 114. You can only cancel your own jobs.</p>
+
+<p>Interactive Jobs:</p>
+
+<p><br></p>
+
+<p><br></p>
+
+<p><br></p>
+
+<p><u><strong>Running Applications on Kepler</strong></u></p>
+
+<p>Small test jobs can be run on the head node. If you are going to run a larger job, this should be run in the job scheduler. If you are still in the testing phase, we ask that you use the interactive queue or std queue. The commands for this are below. There is also a more detailed overview section below.</p>
+
+<p><u><strong>Interactive Queue</strong></u></p>
+
+<p>There are currently 2 interactive queues set up.</p>
+
+<p>1.&nbsp;&nbsp;apprun</p>
+
+<p>2.&nbsp;&nbsp;apprun_mnt_xfs - <strong>This queue is configured for nodes that have access to the infiniband storage space /mnt/xfs. More information is listed here <u><a href="../infiniband/">infiniband</a></strong></u>.</p>
+
+<pre><code>qlogin -q apprun
+</code></pre>
+
+<p>This qlogin command uses the interactive queue. This will allow you to run a job interactively on a node. The <em>-q apprun</em> command syntax is used to submit the request to the apprun job queue. A job queue is a group of node on the cluster.</p>
+
+<p>If you would like to run a non-interactive job, please start with the std queue. The basic syntax is listed below. <strong>We ask that you start with the <em>std</em> queue.</strong></p>
+
+<pre><code>qsub -q std script_name 
+</code></pre>
+
+<p>This command submits a job to the std job queue. The script_name is the name of the script that will be used to run the job. Basic script syntax is listed below. We will have some example scripts posted on the cluster shortly that you can modify.</p>
+
+<div class="alert rounded-0 alert-light">
+<font size = 2px;>
+#!/bin/bash <br>
+#<br>
+#$ -cwd - &nbsp;&nbsp;<strong>Note: This tells the job scheduler to execute the job in the current working directory.</strong><br>
+#$ -j y    &nbsp;&nbsp;<strong>Note: -j y means to merge the standard error stream into the standard output stream instead of having two separate error and output streams.</strong><br>
+#$ -S /bin/bash &nbsp;&nbsp;<strong>Note: This tells the job scheduler to use the bash shell. This is the shell that is used by default on Kepler.</strong><br>
+#<br>
+date    &nbsp;&nbsp;<strong>  Note: This area of the script is where commands are put to run your application. This example prints the date, sleeps for 10 seconds, then</strong><br>
+sleep 10     &nbsp;&nbsp; <strong>prints the date again. This is just used for an example</strong>
+<br>
+
+date
+</font>
+</div>
+
+<p><u><strong>Grid Engine Overview</strong></u></p>
+
+<p>This is a short overview of the Sun Grid Engine (SGE), which is now run by Oracle. This is a very easy to use, robust batch scheduler that can handle large work loads across entire organizations. You can find more detailed information in the <u><a href="https://www.oracle.com/technetwork/oem/host-server-mgmt/twp-gridengine-beginner-167116.pdf">Beginner&rsquo;s Guide</a></u>. The version of SGE that is installed on the Kepler is 6.2u5p2.</p>
+
+<p>Submitting jobs, controlling jobs, and gathering information can be accomplished with the commands listed below. Or, you can use QMON, the graphical user interface (GUI) tool. Please see the <u><a href="../../qmon-tutorial">QMON tutorial</a></u>.</p>
+
+<p><u><strong>Basic Commands</strong></u><br>
+The SGE is very easy to use. The following sections will describe the commands you will need to submit simple jobs to the Grid Engine.<br>
+qsub – submit a job to the batch scheduler.<br>
+qstat – examine the job que.<br>
+qdel - delete a job from the que</p>
+
+<p><u><strong>Submitting a job to queue with qsub</strong></u><br></p>
+
+<p>The command syntax is as follows:</p>
+
+<pre><code>qsub [options] [scriptfile | -- [script args]]
+</code></pre>
+
+<p>The following example submits a script called sge-date.</p>
+
+<pre><code>$ qsub sge-date
+</code></pre>
+
+<p>SGE will run the program, and will place two files in your current directory:</p>
+
+<pre><code>sge-date.e#
+sge-date.0#
+</code></pre>
+
+<p>where # is the job number assigned by SGE. The sge-date.e# file contains the standard output from the standard error and the sge-date.o# file contains the output from the standard out.</p>
+
+<p><u><strong>Job Scripts</strong></u><br>
+The most efficient way to submit a job to the SGE is to use a “job script”. The script allows all options and the program file to be placed in a single file.</p>
+
+<p><u><strong>Que Status: qstat</strong></u><br>
+Que status allows for your jobs to be found by issuing a qstat command. The following is an example of using the qstat -u chemlab. This would show all jobs that the user, chemlab, is running.</p>
+
+<p>To look at jobs for all users, you would issue the following command.</p>
+
+<pre><code>qstat
+</code></pre>
+
+<p><u><strong>Troubleshooting Jobs</strong></u><br>
+There can be several reason a job will not run. The most common reason is due to resource requirements. It is possible that the cluster may be full and you will have to wait for available resources (processors etc.)</p>
+
+<p>It is also possible that your job may have experienced an error in the run script. In this case the job status will be listed as “Eqw”. You can query the job’s status by entering the following:</p>
+
+<pre><code>qstat -explain c -j _Job-ID_
+</code></pre>
+
+<p>Where _Job-ID_ is the Grid Engine job number.</p>
+
+<p><u><strong>Deleting a Job: qdel</strong></u><br></p>
+
+<p>Jobs may be deleted by using the qdel command as follows:</p>
+
+<pre><code>$ qdel job-id
+</code></pre>
+
+<p>The job-id is the number assigned by SGE when you submit the job using qsub. You cab only delete your own jobs.</p>
+
+            <p class="post-meta border-bottom pb-3 mb-0">Updated on 25 Jan 2019</p><nav class="pagination mt-3"><a class="nav nav-prev" href="/research-computing-group/support/r-language/" title="R Language"><i class="ti-arrow-left mr-2"></i>R Language</a>
+            <a class="nav nav-next" href="/research-computing-group/support/sas-spss-atlas/" title="SAS, SPSS, and ATLAS.ti">SAS, SPSS, and ATLAS.ti<i class="ti-arrow-right ml-2"></i></a>
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+       
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/research-computing-group/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/research-computing-group/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="/research-computing-group/js/script.min.js"></script>
+
+
+</body>
+
+</html>

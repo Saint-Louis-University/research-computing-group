@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>SLURM Commands</title>
+
+  <meta name="generator" content="Hugo 0.53" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+  <style>
+  :root{
+    --primary-color:#003da5;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/research-computing-group/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/research-computing-group/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/research-computing-group/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/research-computing-group/images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation -->
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/research-computing-group/">SLU</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/research-computing-group/">Home</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/about">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            getting-started
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/gettingstarted">Getting Started</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ftp/">FTP</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ssh/">SSH</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vpn/">VPN</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vnc/">VNC</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            support
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/a-support">Support</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/application-installation/">Application Installation</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/compilers/">Compilers</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/infiniband/">Infiniband</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/r-language/">R Language</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/storage/">Storage</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            slurm
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            apex
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/apex/">APEX</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/hardware/">Hardware</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/faq">FAQ</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/contact">Contact</a>
+        </li>
+        
+        
+      </ul>
+      
+      <ul class="list-inline text-center mb-0">
+        
+        <li class="list-inline-item"><a class="text-dark" href="/research-computing-group/"></a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/research-computing-group/gettingstarted/">Getting Started</a>
+            </li>
+            <li class="parent d-block "><a href="/research-computing-group/slurm/">Slurms</a>
+              <ul class="sub-menu">
+            <li class=""><a href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            </li>
+            <li class=" active "><a href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/apex/">Apexes</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/apex/apex/">APEX</a>
+            </li>
+            <li class=""><a href="/research-computing-group/apex/hardware/">Hardware</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/">Getting-starteds</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/getting-started/ftp/">FTP</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/ssh/">SSH</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vpn/">VPN</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc/">VNC</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc_subpage/">VNC Subpage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/support/">Supports</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/support/application-installation/">Application Installation</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/compilers/">Compilers</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/infiniband/">Infiniband</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/r-language/">R Language</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/storage/">Storage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/contact/">Contact</a>
+            </li>
+            <li class=""><a href="/research-computing-group/faq/">FAQ</a>
+            </li>
+            <li class=""><a href="/research-computing-group/qmon-tutorial/">Qmon Tutorial</a>
+            </li>
+            <li class=""><a href="/research-computing-group/a-support/">Support</a>
+            </li>
+            <li class=""><a href="/research-computing-group/about/">home</a>
+            </li></ul>
+            </nav>
+    
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>SLURM Commands</h2>
+            
+
+<p>SLURM is the job scheduler that we are using on Apex. This allows jobs to be run on a node. How the jobs starts, runs, and completes is normally dictated by a script.<br>
+More detailed information and tutorials can be found at <u><a href="https://slurm.schedmd.com/">SLURM information page.</a></u> Please also read the F.A.Q below. before</p>
+
+<p><strong>Note</strong> : We have listed the most commonly used commands below. Futher</p>
+
+<h4 id="useful-slurm-commands">Useful SLURM Commands</h4>
+
+<p>Here is a list of the most common SLURM commands.</p>
+
+<p><strong>General Commands</strong></p>
+
+<p>Get SLURM documentation:</p>
+
+<p>man sbatch<br>
+man squeue<br>
+man scancel<br></p>
+
+<p><strong>Get Information on Jobs</strong></p>
+
+<p>List Jobs for current user:</p>
+
+<pre><code>squeue -u &lt;username&gt;
+</code></pre>
+
+<p>List all running jobs for a user:</p>
+
+<pre><code>squeue -u &lt;username&gt; -t RUNNING
+</code></pre>
+
+<p>List all pending jobs for a user:</p>
+
+<pre><code>squeue - u &lt;username&gt; -t PENDING
+</code></pre>
+
+<p>List all current jobs in the defq partition for a user:</p>
+
+<pre><code>squeue -u &lt;username&gt; -p defq
+</code></pre>
+
+<p>List detailed status for a job. This can be helpful for troubleshooting.</p>
+
+<pre><code>scontrol show jobid -dd &lt;jobid&gt;
+</code></pre>
+
+<p>List statistics on completed job by jobID:</p>
+
+<pre><code>sacct -j &lt;jobid&gt; --format=JobID,JobName,MaxRSS,Elapsed
+</code></pre>
+
+<p>To view the same information for all jobs of a user:</p>
+
+<pre><code>sacct -u &lt;username&gt; --format=JobID,JobName,MaxRSS,Elapsed
+</code></pre>
+
+<p><strong>Controlling Jobs</strong></p>
+
+<p>Cancel a job:</p>
+
+<pre><code>scancel &lt;jobid&gt;
+</code></pre>
+
+<p>To cancel a job for a user:</p>
+
+<pre><code>scancel -u &lt;username&gt;
+</code></pre>
+
+<p>Cancel all pending jobs for a user:</p>
+
+<pre><code>scancel -t Pending -u &lt;username&gt;
+</code></pre>
+
+<p>Cancel one or more jobs by name:</p>
+
+<pre><code>scancel --name myJonName
+</code></pre>
+
+<p>Pause a job:</p>
+
+<pre><code>scontrol hold &lt;jobid&gt;
+</code></pre>
+
+<p>To resume a job:</p>
+
+<pre><code>scontrol resume &lt;jobid&gt;
+</code></pre>
+
+<p>To requeue (cancel and rerun) a particular job:</p>
+
+<pre><code>scontrol require &lt;jobid&gt;
+</code></pre>
+
+<h4 id="getting-information">Getting Information</h4>
+
+<p>There are many commands that you can use to interact with SLURM. The sinfo command gives you an overview of the resources offered by the cluster, while  squeue shows which jobs have resources allocated to them. Examples of both command are listed below.</p>
+
+<p>By default, sinfo lists the partitions that are available. A <strong>partition</strong> is a set of compute <strong>compute nodes</strong> (machines dedicated to running jobs) grouped logically. In the example below, node are grouped by machine, memory, and matlab which is a application. The <strong>timelimit</strong> is the maximum time that a job can run on a node. The default partition is, <strong>defq</strong>, is marked by an *. Jobs are running on all the nodes on the example. They have a state of <strong>alloc</strong> which means that they are currently allocated.</p>
+
+<pre><code>sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+defq*        up   infinite     10  alloc compute-[018-021,026-031]
+hi_mem       up   infinite      4  alloc compute-[018-021]
+matlab       up   infinite      3  alloc compute-[022-024]
+med_mem      up   infinite      4  alloc compute-[022-025]
+</code></pre>
+
+<p><em>Squeue</em> shows how many jobs are currently running on the cluster.</p>
+
+<pre><code>squeue
+         JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+         20488 hi_mem,me executeA nkullman PD       0:00      1 (Resources)
+         20489 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20490 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20491 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20492 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20493 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20494 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+         20495 hi_mem,me executeA nkullman PD       0:00      1 (Priority)
+</code></pre>
+
+<p>There are many switches you can use to filter the output by user (&minus;&minus;user), by partition (&minus;&minus;partition), by state (&minus;&minus;state), etc.</p>
+
+<p><strong>Partitions</strong></p>
+
+<p>A partition is a group of machines on the cluster that jobs are run in. If you don&rsquo;t request a particular partition, your job will ruin on the default, defq, partition.Here are the current partitions on Apex.</p>
+
+<p>1.&nbsp;&nbsp;defq - This is the default queue which most jobs will be run it.<br>
+2.&nbsp;&nbsp;hi-men - This is the queue that contains the nodes with the highest memory in the cluster.<br>
+3.&nbsp;&nbsp;med_mem - This is the queue the contains the nodes that have less memory than the high memory nodes,<br>
+4.&nbsp;&nbsp;matlab - This queue contains the nodes that have Matlab installed. These nodes can run Matlab Distributed Computing Server.</p>
+
+<p><strong>Modifying a submitted job</strong></p>
+
+<p>A job can be modified after its submitted. This can be done with the scontrol command.</p>
+
+<p>If you wanted to change the partition a job is running in, you could do the following.</p>
+
+<pre><code>scontrol update jobid=$i partition=hi_mem
+</code></pre>
+
+<p>Note: That $i is the actual job number. The partition the job will run in will change to hi_mem. To see more command syntax simply type scontrol help.</p>
+
+<h4 id="running-jobs">Running Jobs</h4>
+
+<p>Normally you will use scripts to submit a job to the scheduler. We suggest that you look at the <u><a href="http://www.brightcomputing.com/blog/bid/174099/slurm-101-basic-slurm-usage-for-linux-clusters">SLRUM 101</a></u> page to get a basic idea. There are also script examples below. You can also use SLURM to run an interactive job. That will allow you to login to a node to run an application or test code. Example syntax is listed below.</p>
+
+<p><strong>Interactive Jobs</strong></p>
+
+<pre><code>srun -p matlab --pty -t 1:00 /bin/bash 
+</code></pre>
+
+<p>This command will find a node in the matlab partition and will allow you to stay logged into the node for one minute. Time format in SLUM is HH:MM:SS. You can see the syntax for srun by typing man srun at the command prompt.</p>
+
+<p>Here are the current partitions on Apex.</p>
+
+<p>There are 4 queues currently set up on the cluster. The queues are as follows.</p>
+
+<p>1.&nbsp;&nbsp;defq - This is the default queue which most jobs will be run it.<br>
+2.&nbsp;&nbsp;hi-men - This is the queue that contains the nodes with the highest memory in the cluster.<br>
+3.&nbsp;&nbsp;med_mem - This is the queue the contains the nodes that have less memory than the high memory nodes,<br>
+4.&nbsp;&nbsp;matlab - This queue contains the nodes that have Matlab installed. These nodes can run Matlab Distributed Computing Server.</p>
+
+<p><strong>Job Scripts</strong></p>
+
+<p>A job script consist of two parts: <strong>resource requests</strong> and <strong>job steps</strong>. Resource requirements consist of number of CPU&rsquo;s, computing expected duration, amounts of RAM or disk space, etc. Job steps describe <strong>tasks</strong> that must be done, and/or software that needs to be run.</p>
+
+<p>A <strong>submission script</strong> is a <strong>shell script</strong>, e.g BASH script whose comments are prefixed with SBATCH. These are SLURM parameters describing resource requests and other submission options. The script it&rsquo;s self is a job step. Other job steps are created with the <strong>srun</strong> command.</p>
+
+<p>The example below is a script called submit.sh.</p>
+
+<pre><code>#!/bin/bash
+#
+#SBATCH --job-name=test
+#SBATCH --output=res.text
+#
+#SBATCH --ntasks=1
+#SBATCH --time=10:00
+
+srun hostname
+run sleep 60
+</code></pre>
+
+<p>This script requests one <strong>CPU</strong> for 10 minutes, along with 100 MB of RAM, and it will run in the default, defq, queue. When started, the job will run the first job step srun hostname. This will launch a unix command hostname on the node that requested CPU was allocated. Then a second step will start the sleep command. After you write the script, you will need to <strong>submit</strong> the job with the <strong>batch</strong> command. When the job is finished, it will return to the <strong>shell prompt $</strong>.</p>
+
+<pre><code>$ sbatch submit.sh
+sbatch: Submitted batch job to 2133
+</code></pre>
+
+<p>The job then enters the queue in the <em>PENDING</em> state. Once resources become available and the job has highest priority, an <strong>allocation</strong> is created for it and it goes to the RUNNING state. If the job completes correctly, it goes to the <em>COMPLETED</em> state, otherwise, it is set to the <em>FAILED</em> state.</p>
+
+<p>Upon compeltion, the output file contains the result of the commands run in the script file. In the above example, you can see it with <strong>cat res.text.</strong></p>
+
+<p>Note that you can create an <strong>interactive job</strong> with the <strong>salloc</strong> command or by issuing a <strong>srun</strong> command directly.</p>
+
+<p><br></p>
+
+<p><strong>Parallel Jobs</strong></p>
+
+<p>But, still, the real question is: How do you create a parallel job?</p>
+
+<p>There are several ways a <strong>parallel job</strong>, one whose tasks are run simultaneously, can be created:</p>
+
+<p><font size = 3>
+<li style="PADDING-LEFT:20px">by running a multi-process program (<a href="https://en.wikipedia.org/wiki/SPMD">SPMD</a> paradigm, e.g. with <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a>)</li>
+<li style="PADDING-LEFT:20px">by running a multithreaded program (shared memory paradigm, e.g. with <a href="https://en.wikipedia.org/wiki/OpenMP">OpenMP</a> or <a href="https://en.wikipedia.org/wiki/POSIX_Threads">pthreads</a>)</li>
+<li style="PADDING-LEFT:20px">by running several instances of a single-threaded program (so-called <em>embarrassingly parallel</em> paradigm)</li>
+<li style="PADDING-LEFT:20px">by running one master program controling several slave programs (<em>master/slave</em> paradigm)</li>
+</font></p>
+
+<p>In the Slurm context, a task is to be understood as a <strong>process</strong>. So a multi-process program is made of several tasks. By contrast, a multithreaded program is composed of only one task, which uses several CPUs.</p>
+
+<p>Tasks are requested/created with the <span style="background-color:#ffffff;font-family:Comic Sans MS">&minus;&minus;ntasks</span> option, while CPUs, for the multithreaded programs, are requested with the <span style="background-color:#ffffff;font-family:Comic Sans MS">&minus;&minus;cpus-per-task</span> option. Tasks cannot be split across several compute nodes, so requesting several CPUs with the <span style="background-color:#ffffff;font-family:Comic Sans MS">&minus;&minus;cpus-per-task</span> option will ensure all CPUs are allocated on the same compute node. By contrast, requesting the same amount of CPUs with the <span style="background-color:#ffffff;font-family:Comic Sans MS">&minus;&minus;ntasks</span> option may lead to several CPUs being allocated on several, distinct compute nodes.</p>
+
+            <p class="post-meta border-bottom pb-3 mb-0">Updated on 25 Jan 2019</p><nav class="pagination mt-3"><a class="nav nav-prev" href="/research-computing-group/slurm/slurm-examples/" title="SLURM Examples"><i class="ti-arrow-left mr-2"></i>SLURM Examples</a>
+            <a class="nav nav-next" href="/research-computing-group/apex/" title="Apexes">Apexes<i class="ti-arrow-right ml-2"></i></a>
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+       
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/research-computing-group/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/research-computing-group/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="/research-computing-group/js/script.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>VPN</title>
+
+  <meta name="generator" content="Hugo 0.53" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+  <style>
+  :root{
+    --primary-color:#003da5;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/research-computing-group/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/research-computing-group/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/research-computing-group/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/research-computing-group/images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation -->
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/research-computing-group/">SLU</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/research-computing-group/">Home</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/about">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            getting-started
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/gettingstarted">Getting Started</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ftp/">FTP</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ssh/">SSH</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vpn/">VPN</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vnc/">VNC</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            support
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/a-support">Support</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/application-installation/">Application Installation</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/compilers/">Compilers</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/infiniband/">Infiniband</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/r-language/">R Language</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/storage/">Storage</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            slurm
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            apex
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/apex/">APEX</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/hardware/">Hardware</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/faq">FAQ</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/contact">Contact</a>
+        </li>
+        
+        
+      </ul>
+      
+      <ul class="list-inline text-center mb-0">
+        
+        <li class="list-inline-item"><a class="text-dark" href="/research-computing-group/"></a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/research-computing-group/gettingstarted/">Getting Started</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/">Slurms</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/apex/">Apexes</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/apex/apex/">APEX</a>
+            </li>
+            <li class=""><a href="/research-computing-group/apex/hardware/">Hardware</a>
+            </li></ul>
+              
+            </li>
+            <li class="parent d-block "><a href="/research-computing-group/getting-started/">Getting-starteds</a>
+              <ul class="sub-menu">
+            <li class=""><a href="/research-computing-group/getting-started/ftp/">FTP</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/ssh/">SSH</a>
+            </li>
+            <li class=" active "><a href="/research-computing-group/getting-started/vpn/">VPN</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc/">VNC</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc_subpage/">VNC Subpage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/support/">Supports</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/support/application-installation/">Application Installation</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/compilers/">Compilers</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/infiniband/">Infiniband</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/r-language/">R Language</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/storage/">Storage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/contact/">Contact</a>
+            </li>
+            <li class=""><a href="/research-computing-group/faq/">FAQ</a>
+            </li>
+            <li class=""><a href="/research-computing-group/qmon-tutorial/">Qmon Tutorial</a>
+            </li>
+            <li class=""><a href="/research-computing-group/a-support/">Support</a>
+            </li>
+            <li class=""><a href="/research-computing-group/about/">home</a>
+            </li></ul>
+            </nav>
+    
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>VPN</h2>
+            <p>VPN stands for virtual private network. This allows you to make a securely connect to campus resources when you are not on campus.</p>
+
+<p>In order to access the HPC cluster off campus, you will need a Billiken Secure Connect VPN account.</p>
+
+<p>VPN information and account request can be found here <u><a href="https://www.slu.edu/its/index.php">Billiken VPN</a></u>.</p>
+
+<p><strong>Note: In order to get a student account, permission will be needed from the department chair.</strong></p>
+
+            <p class="post-meta border-bottom pb-3 mb-0">Updated on 25 Jan 2019</p><nav class="pagination mt-3"><a class="nav nav-prev" href="/research-computing-group/getting-started/ssh/" title="SSH"><i class="ti-arrow-left mr-2"></i>SSH</a>
+            <a class="nav nav-next" href="/research-computing-group/getting-started/vnc/" title="VNC">VNC<i class="ti-arrow-right ml-2"></i></a>
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+       
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/research-computing-group/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/research-computing-group/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="/research-computing-group/js/script.min.js"></script>
+
+
+</body>
+
+</html>

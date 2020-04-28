@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting-starteds on SLU RCG Website</title>
+    <link>/research-computing-group/getting-started/</link>
+    <description>Recent content in Getting-starteds on SLU RCG Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/research-computing-group/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FTP</title>
+      <link>/research-computing-group/getting-started/ftp/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/getting-started/ftp/</guid>
+      <description>File Transfer Protocol (FTP) is a standard network protocol used to copy a file from one host to another over a TCP/IP-based network, such as the Internet. FTP is built on a client-server architecture and utilizes separate control and data connections between the client and server. FTP users may authenticate themselves using a clear-text sign-in protocol, but they can connect anonymously if the server is configured to allow it.
+One of the easiest FTP applications to use if FileZilla.</description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>/research-computing-group/getting-started/ssh/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/getting-started/ssh/</guid>
+      <description>SSH is a secure protocol that allows you to connect to a remote system. In order to access a HPC cluster from off-campus, you will need Billiken Secure Connect VPN account. More information can be found here BIlliken Secure Connect (VPN).
+Note: There is also a graphical user interface that can be used with the cluster. See the VNC section for more information.
+Common Linux Commands
+Once you have logged into an HPC, you are communicating to a completely text-based Linux environment.</description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>/research-computing-group/getting-started/vpn/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/getting-started/vpn/</guid>
+      <description>VPN stands for virtual private network. This allows you to make a securely connect to campus resources when you are not on campus.
+In order to access the HPC cluster off campus, you will need a Billiken Secure Connect VPN account.
+VPN information and account request can be found here Billiken VPN.
+Note: In order to get a student account, permission will be needed from the department chair.</description>
+    </item>
+    
+    <item>
+      <title>VNC</title>
+      <link>/research-computing-group/getting-started/vnc/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/getting-started/vnc/</guid>
+      <description>VNC allows you to use the cluster with a graphical user interface. Detailed information can be found on Wikipedia VNC page.
+Before you can use VNC you will need to set up a VNC session on the head node. All VNC sessions also require a ssh tunnel. This is for security purposes. The TightVNC Client will create the tunnel and VNC login in one step. Instructions for this are below.</description>
+    </item>
+    
+    <item>
+      <title>VNC Subpage</title>
+      <link>/research-computing-group/getting-started/vnc_subpage/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/research-computing-group/getting-started/vnc_subpage/</guid>
+      <description>VNC allows you to use a graphical user interface on the cluster.
+See the following VNC documentation for basic setup. There are a few additional steps that will need to be completed to set up VNC.
+If you want to use VNC, you will first need to do the following.
+1.&amp;nbsp;&amp;nbsp;First, you will need to ssh to the server with a ssh client. See the ssh documentation for more information.</description>
+    </item>
+    
+  </channel>
+</rss>

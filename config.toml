@@ -1,0 +1,205 @@
+theme = "dot-hugo-documentation-theme"
+baseURL = "https://saint-louis-university.github.io/research-computing-group/"
+title = "SLU RCG Website"
+publishDir = "docs"
+
+[params]
+primaryColor = "#003da5"
+secondaryColor = "#f9f9f9"
+textColor = "#636363"
+textColorDark = "#242738"
+whiteColor = "#ffffff"
+title = "homepage"
+dataFormat = "2 January 2006"
+home = "Home"
+logo = "SLU"
+languageCode = "en-us"
+
+# navigation
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 1
+   
+[[menu.main]]
+    name = "getting-started"
+    url = "/getting-started"
+    weight = 2
+    hasChildren = true
+  
+      [[menu.main]]
+      parent = "getting-started"
+      name = "Getting Started"
+      URL = "/gettingstarted"
+      weight = 1 
+      
+      [[menu.main]]
+      parent = "getting-started"
+      name = "SSH"
+      URL = "/getting-started/ssh/"
+      weight = 3
+      
+      [[menu.main]]
+      parent = "getting-started"
+      name = "VPN"
+      URL = "/getting-started/vpn/"
+      weight = 4
+      
+      [[menu.main]]
+      parent = "getting-started"
+      name = "FTP"
+      URL = "/getting-started/ftp/"
+      weight = 2
+      
+      [[menu.main]]
+      parent = "getting-started"
+      name = "VNC"
+      URL = "/getting-started/vnc/"
+      weight = 5
+      
+[[menu.main]]
+    name = "support"
+    url = "/support"
+    weight = 3
+    hasChildren = true
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Support"
+    url = "/a-support"
+    weight = 1
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Application Installation"
+    url = "/support/application-installation/"
+    weight = 2
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Compilers"
+    url = "/support/compilers/"
+    weight = 3
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Infiniband"
+    url = "/support/infiniband/"
+    weight = 4
+    
+    [[menu.main]]
+    parent = "support"
+    name = "R Language"
+    url = "/support/r-language/"
+    weight = 5
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Running Jobs on the Cluster"
+    url = "/support/running-cluster/"
+    weight = 6
+    
+    [[menu.main]]
+    parent = "support"
+    name = "SAS, SPSS, and ATLAS.ti"
+    url = "/support/sas-spss-atlas/"
+    weight = 7
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Storage"
+    url = "/support/storage/"
+    weight = 8
+    
+    [[menu.main]]
+    parent = "support"
+    name = "Multiple Versions of Python"
+    url = "/support/python-versions/"
+    weight = 9
+
+[[menu.main]]
+    name = "slurm"
+    url =  "/slurm"
+    weight = 4
+    hasChildre = true
+    
+    [[menu.main]]
+    parent = "slurm"
+    name = "SLURM Commands"
+    url = "/slurm/slurm-commands/"
+    weight = 1
+    
+    [[menu.main]]
+    parent = "slurm"
+    name = "SLURM Examples"
+    url = "/slurm/slurm-examples/"
+    weight = 2
+    
+[[menu.main]]
+    name = "apex"
+    url = "/apex"
+    weight = 5
+    hasChildre = true
+    
+    [[menu.main]]
+    parent = "apex"
+    name = "APEX"
+    url = "/apex/apex/"
+    weight = 1
+    
+    [[menu.main]]
+    parent = "apex"
+    name = "Hardware"
+    url = "/apex/hardware/"
+    weight = 2
+    
+[[menu.main]]
+    name = "Contact"
+    url  = "/contact"
+    weight = 7
+
+[[menu.main]]
+    name = "FAQ"
+    url = "/fAq"
+    weight = 6
+    
+# banner 
+[params.banner]
+    title = "Research Computing Group"
+    description = "Find advice and answers from our support team fast or get in touch"
+    placeholder = "Have a question? Just ask here or enter terms"
+    
+# Topics 
+[params.topics]
+    title = "Find your answer by subject"
+    
+# call to action
+[params.cta]
+    enable = true
+    title = "Didn't find an answer to your question?"
+    description = "Didn't find an answer to your question?"
+    btnText = "contact us"
+    btnURL = "/contact"
+    
+  # contact
+  [params.contact]
+    title = "Got Any Questions"
+    content = "Submit the form and confirm your email address at <a class='text-primary' href='https://formspree.io/'>Formspree</a> Then add the following lines to contact page YAML Front Matter."
+
+  # footer social icon
+  [[socialIcon]]
+    icon = "ti-facebook"
+    URL = "/#"
+
+  [[socialIcon]]
+    icon = "ti-twitter-alt"
+    URL = "/#"
+    
+  [[socialIcon]]
+    icon = "ti-vimeo-alt"
+    URL = "/#"
+    
+  [[socialIcon]]
+    icon = "ti-instagram"
+    URL = "/#"

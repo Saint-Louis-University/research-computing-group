@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>SAS, SPSS, and ATLAS.ti</title>
+
+  <meta name="generator" content="Hugo 0.53" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/themify-icons/themify-icons.css">
+  <!-- highlight -->
+  <link rel="stylesheet" href="/research-computing-group/plugins/highlight/hybrid.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+  <style>
+  :root{
+    --primary-color:#003da5;
+    --secondary-color:#f9f9f9;
+    --text-color:#636363;
+    --text-color-dark:#242738;
+    --white-color:#ffffff;
+  }  
+  </style>
+
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/research-computing-group/css/style.min.css" integrity="" media="screen">
+
+  <!-- jquiry -->
+  <script src="/research-computing-group/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <!-- jquary ui -->
+  <script src="/research-computing-group/plugins/jquery/jquery-ui.js"></script>
+
+  <!--Favicon-->
+  <link rel="icon" href="/research-computing-group/images/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation -->
+<header class="shadow-bottom position-relative">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/research-computing-group/">SLU</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="/research-computing-group/">Home</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/about">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            getting-started
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/gettingstarted">Getting Started</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ftp/">FTP</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/ssh/">SSH</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vpn/">VPN</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/getting-started/vnc/">VNC</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            support
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/a-support">Support</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/application-installation/">Application Installation</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/compilers/">Compilers</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/infiniband/">Infiniband</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/r-language/">R Language</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/storage/">Storage</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            slurm
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            apex
+          </a>
+          <div class="dropdown-menu" >
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/apex/">APEX</a>
+            
+            <a class="dropdown-item" href="/research-computing-group/apex/hardware/">Hardware</a>
+            
+          </div>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/faq">FAQ</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/research-computing-group/contact">Contact</a>
+        </li>
+        
+        
+      </ul>
+      
+      <ul class="list-inline text-center mb-0">
+        
+        <li class="list-inline-item"><a class="text-dark" href="/research-computing-group/"></a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+
+
+<section class="single pt-5 bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="p-4 bg-white sticky-top">
+            
+            <nav class="sidebar-menu">
+              <ul class="list-styled">
+            <li class=""><a href="/research-computing-group/gettingstarted/">Getting Started</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/">Slurms</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/slurm/slurm-examples/">SLURM Examples</a>
+            </li>
+            <li class=""><a href="/research-computing-group/slurm/slurm-commands/">SLURM Commands</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/apex/">Apexes</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/apex/apex/">APEX</a>
+            </li>
+            <li class=""><a href="/research-computing-group/apex/hardware/">Hardware</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/">Getting-starteds</a>
+              <ul class="">
+            <li class=""><a href="/research-computing-group/getting-started/ftp/">FTP</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/ssh/">SSH</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vpn/">VPN</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc/">VNC</a>
+            </li>
+            <li class=""><a href="/research-computing-group/getting-started/vnc_subpage/">VNC Subpage</a>
+            </li></ul>
+              
+            </li>
+            <li class="parent d-block "><a href="/research-computing-group/support/">Supports</a>
+              <ul class="sub-menu">
+            <li class=""><a href="/research-computing-group/support/application-installation/">Application Installation</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/compilers/">Compilers</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/infiniband/">Infiniband</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/python-versions/">Multiple Versions of Python</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/r-language/">R Language</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/running-cluster/">Running Jobs on the Cluster</a>
+            </li>
+            <li class=" active "><a href="/research-computing-group/support/sas-spss-atlas/">SAS, SPSS, and ATLAS.ti</a>
+            </li>
+            <li class=""><a href="/research-computing-group/support/storage/">Storage</a>
+            </li></ul>
+              
+            </li>
+            <li class=""><a href="/research-computing-group/contact/">Contact</a>
+            </li>
+            <li class=""><a href="/research-computing-group/faq/">FAQ</a>
+            </li>
+            <li class=""><a href="/research-computing-group/qmon-tutorial/">Qmon Tutorial</a>
+            </li>
+            <li class=""><a href="/research-computing-group/a-support/">Support</a>
+            </li>
+            <li class=""><a href="/research-computing-group/about/">home</a>
+            </li></ul>
+            </nav>
+    
+            
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="p-5 bg-white">
+            <h2>SAS, SPSS, and ATLAS.ti</h2>
+            <p>These powerful analytic programs have been made available for faculty and students by Saint Louis University</p>
+
+<p><font color = "green"; strong; size = 5px>SAS</font></p>
+
+<p>Available for university purposes on University-owned or personal machines</p>
+
+<p><font size=3px>
+<li style="PADDING-LEFT:20px">Each computer will need its own yearly subscription: </li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">The subscription runs from July 1 to June 30 the following year</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">For July 1, 2014 – June 30, 2015, regardless of your actual date of purchase, the price is $95</li>
+<li style="PADDING-LEFT:20px">For <strong><em>departmental</em></strong> purchases&hellip;</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">payment of the $95 license can be made through eSeeIDO under the &ldquo;Finance&rdquo; tab in Banner</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Upon proper receipt of the request, ITS will install or update the SAS license on the requested computer</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">More information can be found here: <a href="https://sites.google.com/a/slu.edu/its-community-forum/departmental-purchases/sas">https://sites.google.com/a/slu.edu/its-community-forum/departmental-purchases/sas</a></li>
+<li style="PADDING-LEFT:20px">For <strong><em>personal</em></strong> purchases&hellip;</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Please go to Student Tech Services Center, Busch Student Center, Room 137 to purchase</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">You will need to bring either a flash drive 20 GB or larger, your computer, or you will need purchase a flash drive from the center to obtain the software</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">Payment of the $95 license can be made in the form of cash, credit, Billiken Bucks, or payroll deduction</li>
+</font></p>
+
+<p><font color = "green"; strong; size = 5px>SPSS</font></p>
+
+<p>Available for <u><em>educational research purposes only</em></u> on University-owned or personal machines</p>
+
+<p><font size = 3>
+<li style="PADDING-LEFT:20px">For a <strong><em>University-owned</em></strong> computer&hellip; </li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">the enterprise license agreement allows for this software to be available for University machines at no charge if the usage is for <u><em>educational research purposes</em></u></li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Please contact your local <strong>ITS Support Desk</strong> at <strong>314-977-4000</strong> or <u><a href="mailto:helpdesk@slu.edu">helpdesk@slu.edu</a></u> to request software installation</li>
+<li style="PADDING-LEFT:20px">For a <strong><em>personal</em></strong> computer&hellip;</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Each computer will need its own yearly subscription:</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">The subscription runs from August 1 to July 30 the following year</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">For August 1, 2014 – July 30, 2015, <em>regardless of your actual date of purchase</em>, the price is $50</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Please go to <strong>Student Tech Services Center, Busch Student Center, Room 137</strong> to purchase</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">You will need to bring either a flash drive 10 GB or larger, your computer, or you will need purchase a flash drive from the center to obtain the software</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">Payment can be made in the form of cash, credit, Billiken Bucks, or payroll deduction</li>
+</font></p>
+
+<p><font color = "green"; strong; size = 5px>ATLAS.ti</font></p>
+
+<p>This alternative for SAS is available for university purposes on University-owned or personal machines</p>
+
+<p><font size=3>
+<li style="PADDING-LEFT:20px">Each computer will need its own yearly subscription: </li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">The subscription runs from July 1 to June 30 the following year</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">For July 1, 2014 – June 30, 2015, regardless of your actual date of purchase, the price is $50</li>
+<li style="PADDING-LEFT:20px">For <strong><em>departmental</em></strong> purchases&hellip;</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">payment of the $50license can be made through eSeeIDO under the &ldquo;Finance&rdquo; tab in Banner</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Upon proper receipt of the request, ITS will install or update the ATLAS.ti license on the requested computer</li>
+<li style="PADDING-LEFT:20px">For <strong><em>personal</em></strong> purchases&hellip;</li>
+<li style="list-style-type:circle;PADDING-LEFT:60px">Please go to <strong>Student Tech Services Center, Busch Student Center, Room 137</strong> to purchase</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">You will need to bring either a flash drive 10 GB or larger, your computer, or you will need purchase a flash drive from the center to obtain the software</li>
+<li style="list-style-type:square;PADDING-LEFT:100px">Payment of the $50 license can be made in the form of cash, credit, Billiken Bucks, or payroll deduction</li>
+</font>
+<br></p>
+
+<p style ="font-size:80%;line-height:1.1;">
+References:<br>
+<span style = "color:blue;">https://sites.google.com/a/slu.edu/its-community-forum</span><br>
+<span style = "color:blue;">http://www.slu.edu/busch-student-center/student-tech-service-center/hardware-and-software-discounts/software-discounts</span><br>
+Megan Greathouse, SLU ITS, Student Service Desk Manager
+</p>
+
+            <p class="post-meta border-bottom pb-3 mb-0">Updated on 25 Jan 2019</p><nav class="pagination mt-3"><a class="nav nav-prev" href="/research-computing-group/support/running-cluster/" title="Running Jobs on the Cluster"><i class="ti-arrow-left mr-2"></i>Running Jobs on the Cluster</a>
+            <a class="nav nav-next" href="/research-computing-group/support/storage/" title="Storage">Storage<i class="ti-arrow-right ml-2"></i></a>
+            </nav></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+<footer class="section bg-gray pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 text-md-left text-center">
+       
+      </div>
+      <div class="col-md-4 text-md-right text-center">
+        <ul class="list-inline mb-3">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- Bootstrap JS -->
+<script src="/research-computing-group/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- highlight -->
+<script src="/research-computing-group/plugins/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="/research-computing-group/js/script.min.js"></script>
+
+
+</body>
+
+</html>
